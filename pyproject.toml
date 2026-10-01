@@ -1,0 +1,14 @@
+[project]
+name = "sql-project-learning-coach"
+version = "0.1.0"
+requires-python = ">=3.11,<3.13"
+dependencies = ["fastapi","uvicorn","httpx","python-multipart","python-dotenv","duckdb","sqlglot","pydantic"]
+[dependency-groups]
+dev = ["pytest","ruff"]
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+[tool.ruff]
+line-length = 100
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
